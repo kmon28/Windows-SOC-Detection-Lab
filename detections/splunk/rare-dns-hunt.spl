@@ -1,0 +1,6 @@
+index=main source="WinEventLog:Microsoft-Windows-Sysmon/Operational" "<EventID>22</EventID>"
+| rex field=_raw "Image'>(?<Image>[^<]+)"
+| rex field=_raw "QueryName'>(?<QueryName>[^<]+)"
+| stats count as DNSQueries by QueryName Image
+| where DNSQueries <= 5
+| sort DNSQueries
