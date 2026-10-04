@@ -1,0 +1,18 @@
+title: Windows Failed Logon Event
+id: 47a3bfa7-7e53-4b95-8d10-portfolio-0002
+status: experimental
+description: Base event detection for Windows failed authentication. Correlation/thresholding is performed in the SIEM.
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4625
+  condition: selection
+falsepositives:
+  - User typing errors
+  - Stale credentials
+level: low
+tags:
+  - attack.credential_access
+  - attack.t1110
