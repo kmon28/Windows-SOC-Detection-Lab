@@ -1,0 +1,5 @@
+index=main source="WinEventLog:Security" "<EventID>4728</EventID>"
+| rex field=_raw "Name='MemberName'>(?<MemberName>[^<]+)"
+| rex field=_raw "Name='TargetUserName'>(?<GroupName>[^<]+)"
+| rex field=_raw "Name='SubjectUserName'>(?<ChangedBy>[^<]+)"
+| table _time host ChangedBy MemberName GroupName
