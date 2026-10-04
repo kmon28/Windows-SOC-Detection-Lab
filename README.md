@@ -69,7 +69,7 @@ index=main source="WinEventLog:Security" "<EventID>4625</EventID>"
 | sort - FailedAttempts
 ```
 
-### Privileged AD Group Change — T1098
+### Privileged AD Group Change — T1098.007
 Advanced Security Group Management auditing was enabled. A controlled addition of `employee.user` to **Domain Admins** generated Event ID 4728. Splunk extracted actor, member, and group context; a high-severity scheduled alert was validated; the test account was immediately removed.
 
 ### Process-Lineage Threat Hunting
@@ -89,6 +89,33 @@ Splunk Dashboard Studio surfaces total Sysmon telemetry, process creation, DNS q
 The build required AD DS/DNS, domain join, GPO validation, advanced audit policy, process command-line auditing, Sysmon Event IDs 1/11/22, Splunk receiver configuration, DC02 Security-log ingestion, Universal Forwarder troubleshooting, and Windows Firewall SMB/TCP 445 hardening.
 
 A significant ingestion failure was traced to Windows event-channel permissions for `NT SERVICE\SplunkForwarder`. Adding the service identity to **Event Log Readers** restored the endpoint → forwarder → TCP 9997 → Splunk pipeline.
+
+## What This Project Proves
+
+This project is intentionally broader than a SIEM installation exercise. It demonstrates that I can:
+
+- build and troubleshoot a Windows identity + endpoint telemetry pipeline;
+- reason across **Active Directory, endpoint telemetry, authentication, DNS, and host firewall controls**;
+- translate raw Windows XML into usable SPL fields;
+- create behavioral detections and scheduled alerts;
+- validate detection logic with controlled activity instead of assuming it works;
+- reduce known collection noise while preserving raw evidence;
+- pivot from an alert into a scoped investigation;
+- distinguish a **true-positive detection** from a **malicious incident verdict**;
+- map observed behavior to MITRE ATT&CK without over-mapping;
+- express core analytics as portable Sigma detection-as-code;
+- document limitations, tuning opportunities, and production improvements.
+
+## Deep-Dive Documentation
+
+| Document | Purpose |
+|---|---|
+| [Architecture & Telemetry](docs/architecture.md) | Components, data flow, audit sources, troubleshooting |
+| [Detection Catalog](docs/detection-catalog.md) | Hypotheses, logic, validation, false positives, tuning |
+| [IR-001 — Encoded PowerShell](incident-reports/IR-001-encoded-powershell.md) | Full SOC investigation and disposition |
+| [MITRE ATT&CK Coverage](docs/mitre-attack.md) | Evidence-backed behavior mapping |
+| [Technical Reviewer Guide](docs/reviewer-guide.md) | Interview discussion points and fast review path |
+| [Evidence Index](evidence/README.md) | Screenshot inventory and evidence purpose |
 
 ## Engineering Principles
 
