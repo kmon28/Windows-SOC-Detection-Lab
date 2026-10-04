@@ -1,0 +1,17 @@
+title: User Added to Privileged Security Group
+id: 47a3bfa7-7e53-4b95-8d10-portfolio-0003
+status: experimental
+description: Detects a member being added to a security-enabled global group; intended for privileged-group monitoring such as Domain Admins.
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4728
+  condition: selection
+falsepositives:
+  - Authorized identity administration
+level: high
+tags:
+  - attack.persistence
+  - attack.t1098
