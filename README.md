@@ -42,6 +42,8 @@ VirtualBox host-only network: `192.168.56.0/24` + NAT. DC02: `192.168.56.101`; C
 
 | Capability | Evidence |
 |---|---|
+| **Technical reviewer guide** | [5-minute review path](docs/reviewer-guide.md) |
+| Architecture | [Telemetry flow & engineering notes](docs/architecture.md) |
 | Incident analysis | [IR-001 — Encoded PowerShell](incident-reports/IR-001-encoded-powershell.md) |
 | Detection engineering | [Detection Catalog](docs/detection-catalog.md) |
 | ATT&CK reasoning | [MITRE ATT&CK Mapping](docs/mitre-attack.md) |
