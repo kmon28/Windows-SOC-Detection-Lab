@@ -1,0 +1,8 @@
+index=main source="WinEventLog:Microsoft-Windows-Sysmon/Operational" "<EventID>1</EventID>"
+| rex field=_raw "Image'>(?<Image>[^<]+)"
+| rex field=_raw "CommandLine'>(?<CommandLine>[^<]+)"
+| rex field=_raw "ParentImage'>(?<ParentImage>[^<]+)"
+| search Image="*\\cmd.exe" OR Image="*\\powershell.exe"
+| search NOT CommandLine="*SplunkUniversalForwarder*" NOT CommandLine="*btool*"
+| table _time host Image CommandLine ParentImage
+| sort - _time
