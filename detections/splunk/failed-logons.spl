@@ -1,0 +1,5 @@
+index=main source="WinEventLog:Security" "<EventID>4625</EventID>"
+| rex field=_raw "Name='TargetUserName'>(?<TargetUserName>[^<]+)"
+| stats count as FailedAttempts by TargetUserName
+| where FailedAttempts >= 5
+| sort - FailedAttempts
