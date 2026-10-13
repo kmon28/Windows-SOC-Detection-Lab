@@ -26,6 +26,16 @@ The gallery is organized so a reviewer can jump directly from a technical claim 
 | [PowerShell parent-process analysis](screenshots/Splunk_Powershell_Parent_Process_Analysis.png) | Process relationship analysis |
 | [Controlled PowerShell detection](screenshots/Splunk_Controlled_Powershell_Detection.png) | Detection-validation evidence |
 
+### Visual Evidence
+
+**Event context — time, host, user, and process attribution**
+
+![Encoded PowerShell event context](screenshots/SOC_Incident_Encoded_PowerShell_Event_Context.png)
+
+**Process lineage — command line and parent-process evidence**
+
+![Encoded PowerShell process lineage](screenshots/SOC_Incident_Encoded_PowerShell_Event_Process_Lineage.png)
+
 **Full case narrative:** [IR-001 — Encoded PowerShell Investigation](../incident-reports/IR-001-encoded-powershell.md)
 
 ## Threat Hunting
