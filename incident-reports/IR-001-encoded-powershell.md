@@ -141,10 +141,17 @@ The corresponding portable Sigma rule is available in [detections/sigma/encoded-
 
 ## Evidence
 
-Two complementary screenshots were intentionally retained because the VM display could not show every high-value field legibly in one table:
+Two complementary screenshots were intentionally retained because the VM display could not show every high-value field legibly in one table.
 
-- `SOC_Incident_Encoded_PowerShell_Event_Context.png` — time, host, user, and process context
-- `SOC_Incident_Encoded_PowerShell_Event_Process_Lineage.png` — command line and parent-process evidence
+### Event context
+Time, host, user, and process attribution:
+
+![Encoded PowerShell event context](../evidence/screenshots/SOC_Incident_Encoded_PowerShell_Event_Context.png)
+
+### Process lineage
+Command-line and parent-process evidence:
+
+![Encoded PowerShell process lineage](../evidence/screenshots/SOC_Incident_Encoded_PowerShell_Event_Process_Lineage.png)
 
 Using two readable artifacts is preferable to a single compressed screenshot that obscures investigative details.
 
