@@ -16,6 +16,8 @@ I built a Windows enterprise-style security lab to practice the complete defensi
 The environment uses Windows Server 2022 (**DC02**) as an AD DS/DNS domain controller and a domain-joined Windows 10 endpoint (**CLIENT01**). Sysmon and Windows Security telemetry feed Splunk Enterprise through the Universal Forwarder. I built and validated detections for encoded PowerShell, repeated failed logons, privileged AD group changes, command execution, process lineage, and DNS behavior.
 
 > **Scope:** controlled home-lab simulations are explicitly labeled and are not represented as production incident-response experience.
+>
+> **Access note (October 2026):** Splunk Enterprise was used during a time-limited trial, which has since expired. The Splunk searches, alert-validation evidence, dashboards, and investigation write-ups below document work completed during the trial; they do not imply that the Splunk instance is currently accessible.
 
 ## Architecture
 
