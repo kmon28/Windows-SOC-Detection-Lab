@@ -1,8 +1,8 @@
 # Evidence Gallery
 
-> **44 original lab artifacts** documenting architecture, telemetry collection, detection engineering, alert validation, threat hunting, incident investigation, dashboarding, IAM monitoring, and Windows hardening.
+> **43 non-empty original lab artifacts** documenting architecture, telemetry collection, detection engineering, alert validation, threat hunting, incident investigation, dashboarding, IAM monitoring, and Windows hardening.
 
-### 📂 [Browse all 44 screenshots →](screenshots/)
+### 📂 [Browse all 43 screenshots →](screenshots/)
 
 The gallery is organized so a reviewer can jump directly from a technical claim to the underlying evidence.
 
@@ -12,7 +12,7 @@ The gallery is organized so a reviewer can jump directly from a technical claim 
 |---|---|
 | [Encoded PowerShell detection](screenshots/Splunk_Encoded_Powershell_Detection.png) | Sysmon process telemetry + SPL detection logic |
 | [Encoded PowerShell alert triggered](screenshots/Splunk_Encoded_Powershell_Alert_Triggered.png) | Scheduled alert validation / Trigger History |
-| [Repeated failed-logon detection](screenshots/SOC_Brute_Force_Failed_Logon_Detection.png) | Event 4625 aggregation and thresholding |
+| [Failed-logon detection / alert evidence](screenshots/SOC_Failed_Logon_4625_Alert_Triggered.png) | Event 4625 authentication alert evidence |
 | [Failed-logon alert triggered](screenshots/SOC_Repeated_Failed_Logon_Alert_Triggered.png) | Authentication alert validation |
 | [Privileged-group membership detection](screenshots/SOC_Privileged_Group_Membership_Detection.png) | Event 4728 AD/IAM monitoring |
 | [Privileged-group alert triggered](screenshots/SOC_Privileged_Group_Alert_Triggered.png) | High-severity identity alert validation |
@@ -90,7 +90,7 @@ The gallery is organized so a reviewer can jump directly from a technical claim 
 
 ## Complete Artifact Set
 
-The sections above surface the strongest reviewer-facing evidence. **[Open the screenshots directory](screenshots/)** to inspect the complete 44-file set, including additional setup and validation artifacts.
+The sections above surface the strongest reviewer-facing evidence. **[Open the screenshots directory](screenshots/)** to inspect the 43 non-empty screenshot artifacts, including additional setup and validation artifacts.
 
 ## Evidence Standard
 
