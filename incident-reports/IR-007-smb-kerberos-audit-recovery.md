@@ -69,3 +69,16 @@ Get-WinEvent -FilterHashtable @{LogName='Security';Id=4769} -MaxEvents 10 |
 **What did you prove?** The end-to-end method: generate known activity → inspect identity/source fields → identify telemetry gaps → correct policy → retest with fresh timestamps.
 
 **Why wasn't this an incident?** All observed access was intentionally generated in an isolated lab. Authentication evidence alone does not establish malicious lateral movement.
+
+
+## Verified visual evidence
+
+These screenshots are stored in the Kali assessment repository's shared chronological evidence folder; they document Windows SOC work rather than Kali execution.
+
+**Evidence 49:** [Open full-resolution screenshot](https://github.com/kmon28/Kali-Linux-Security-Assessment-Lab/blob/main/screenshots/49-IR007-SMB-Network-Logon.png)
+
+![Evidence 49 — 49-IR007-SMB-Network-Logon.png](https://raw.githubusercontent.com/kmon28/Kali-Linux-Security-Assessment-Lab/main/screenshots/49-IR007-SMB-Network-Logon.png)
+
+**Evidence 50:** [Open full-resolution screenshot](https://github.com/kmon28/Kali-Linux-Security-Assessment-Lab/blob/main/screenshots/50-IR007-Kerberos-4769-Audit-Validation.png)
+
+![Evidence 50 — 50-IR007-Kerberos-4769-Audit-Validation.png](https://raw.githubusercontent.com/kmon28/Kali-Linux-Security-Assessment-Lab/main/screenshots/50-IR007-Kerberos-4769-Audit-Validation.png)
