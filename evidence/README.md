@@ -1,5 +1,20 @@
 # Evidence Gallery
 
+## Recent Investigations — Verified External Evidence
+
+The newest chronological screenshots are stored in the [Kali assessment repository's shared screenshot directory](https://github.com/kmon28/Kali-Linux-Security-Assessment-Lab/tree/main/screenshots), rather than duplicated here. All three paths below were verified against GitHub.
+
+| Evidence | Open screenshot | Investigation report |
+|---|---|---|
+| 48 — Reusable failed-logon PowerShell detection | [View image](https://github.com/kmon28/Kali-Linux-Security-Assessment-Lab/blob/main/screenshots/48-IR006-Reusable-Detection-Script.png) | [IR-006](../incident-reports/IR-006-failed-logon-script.md) |
+| 49 — SMB network logon, Security 4624 | [View image](https://github.com/kmon28/Kali-Linux-Security-Assessment-Lab/blob/main/screenshots/49-IR007-SMB-Network-Logon.png) | [IR-007](../incident-reports/IR-007-smb-kerberos-audit-recovery.md) |
+| 50 — Kerberos 4769 audit validation | [View image](https://github.com/kmon28/Kali-Linux-Security-Assessment-Lab/blob/main/screenshots/50-IR007-Kerberos-4769-Audit-Validation.png) | [IR-007](../incident-reports/IR-007-smb-kerberos-audit-recovery.md) |
+
+These screenshots are also embedded directly inside the reports. The earlier 43-artifact gallery below documents the original Windows SOC evidence set, not the complete cross-repository screenshot count.
+
+---
+
+
 > **43 non-empty original lab artifacts** documenting architecture, telemetry collection, detection engineering, alert validation, threat hunting, incident investigation, dashboarding, IAM monitoring, and Windows hardening.
 
 ### 📂 [Browse all 43 screenshots →](screenshots/)
