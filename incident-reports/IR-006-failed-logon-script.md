@@ -29,3 +29,12 @@ A concentration of Windows Security **Event ID 4625** records for an account wit
 **What was the result?** The script completed and reported that no account met the configured threshold in that run.
 
 **Why does it matter?** A detection should be repeatable, observable, and explicit about its alert and no-alert outcomes. Positive validation remains a separate engineering step.
+
+
+## Verified visual evidence
+
+These screenshots are stored in the Kali assessment repository's shared chronological evidence folder; they document Windows SOC work rather than Kali execution.
+
+**Evidence 48:** [Open full-resolution screenshot](https://github.com/kmon28/Kali-Linux-Security-Assessment-Lab/blob/main/screenshots/48-IR006-Reusable-Detection-Script.png)
+
+![Evidence 48 — 48-IR006-Reusable-Detection-Script.png](https://raw.githubusercontent.com/kmon28/Kali-Linux-Security-Assessment-Lab/main/screenshots/48-IR006-Reusable-Detection-Script.png)
