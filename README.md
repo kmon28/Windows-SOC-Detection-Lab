@@ -9,6 +9,18 @@
 ![MITRE ATT&CK](https://img.shields.io/badge/MITRE_ATT%26CK-Mapped-EA1B2D)
 ![Status](https://img.shields.io/badge/Project-Complete-2EA44F)
 
+## 🧭 About this repository — recruiter and technical reviewer guide
+
+**Purpose:** A Windows enterprise-style detection engineering and SOC investigation portfolio showing the path from host telemetry to validated alerts and incident conclusions.
+
+**Environment and tools:** Windows Server 2022 DC02 (Active Directory, DNS, Group Policy), domain-joined Windows 10 CLIENT01, Sysmon, Windows Security Event Logs, PowerShell, Sigma, and historical Splunk Enterprise / SPL work. **The Splunk trial has expired**; existing SPL and dashboards are historical evidence, not a currently available service.
+
+**What is documented:** Encoded PowerShell process analysis, failed-login thresholds, privileged AD group changes, Windows event correlation, process context, and detection logic. Evidence and reports are linked in the [recruiter fast path](#recruiter--interviewer-fast-path).
+
+**How to review:** Begin with [IR-001 encoded PowerShell](incident-reports/IR-001-encoded-powershell.md), inspect the [detection catalog](docs/detection-catalog.md), and follow the [reviewer guide](docs/reviewer-guide.md). Use the [common report standard](docs/PORTFOLIO-REPORT-STANDARD.md) for the full investigation, embedded screenshot, command rationale, refresher, and interview-Q&A target format.
+
+**Outcome and relevance:** Demonstrates Windows SOC analysis, telemetry validation, alert engineering, Active Directory monitoring, and documented investigative judgment. Controlled simulations are not presented as production incidents. Legacy report modernization is in progress.
+
 ## Executive Summary
 
 I built a Windows enterprise-style security lab to practice the complete defensive workflow: **collect telemetry → engineer detections → validate alerts → hunt behavior → investigate context → document conclusions**.
