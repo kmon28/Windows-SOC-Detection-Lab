@@ -155,6 +155,49 @@ Command-line and parent-process evidence:
 
 Using two readable artifacts is preferable to a single compressed screenshot that obscures investigative details.
 
+## Five-minute refresher and technical interview preparation
+
+**30-second explanation:** I generated an authorized encoded PowerShell execution on CLIENT01, confirmed Sysmon Event 1 captured the command, and validated a scheduled Splunk alert. I investigated the parent process, user, time window, and neighboring events, filtered known Universal Forwarder noise from the search view, and closed the case as an authorized simulation. The detection was a true positive for encoded execution, but the activity was benign.
+
+| Item | What to remember | Why it mattered |
+|---|---|---|
+| Sysmon Event 1 | Process creation | Provides executable, command line, parent process, and identity |
+| `-EncodedCommand` | PowerShell encoded command argument | Detection lead, not proof of maliciousness |
+| SPL query | Searches recorded process events | Identified the controlled test behavior |
+| Five-minute alert schedule | Periodic query and lookback | Demonstrated scheduled alerting during the historical Splunk trial |
+| 22 → 4 events | Noise-reduced investigation view | Preserved raw events while focusing on relevant activity |
+| MITRE T1059.001 | PowerShell execution technique | Describes the behavior without asserting compromise |
+
+### Why the investigative decisions mattered
+
+1. **Start with raw endpoint evidence:** a triggered alert alone cannot establish execution context.
+2. **Narrow the time window:** reduces unrelated process events and improves correlation.
+3. **Inspect parent process and command line:** distinguishes an authorized test from unexpected launch behavior.
+4. **Filter known collection noise analytically:** improves signal without deleting evidence.
+5. **Separate detection accuracy from incident disposition:** the rule correctly matched a benign test.
+
+<details><summary>Interview question: Why is this a true-positive detection but a benign incident?</summary>
+
+The analytic was designed to identify encoded PowerShell, and that behavior occurred. The event was therefore a true positive for the rule. The user, timing and known authorized test context supported a benign case disposition.
+
+</details>
+
+<details><summary>Interview question: How would you investigate this without Splunk?</summary>
+
+Use Sysmon Event 1 through Windows Event Viewer or `Get-WinEvent`, inspect command line and parent-process context, review nearby Security and PowerShell events, and document findings. The original Splunk trial has expired; this is an alternative workflow, not a claim that it was executed during IR-001.
+
+</details>
+
+<details><summary>Interview question: What is a limitation of the detection?</summary>
+
+Searching raw XML for the literal `EncodedCommand` may miss abbreviated switches and alternate execution paths. A stronger rule would normalize command-line fields, test variants, and correlate additional telemetry.
+
+</details>
+
+**Memory cue:** **Generate → Collect → Alert → Correlate → Validate → Classify → Document.**
+
+---
+
 ## Lessons Learned
 
 - Detection logic and incident disposition are different decisions.
