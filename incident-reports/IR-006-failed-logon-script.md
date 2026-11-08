@@ -21,9 +21,9 @@ A concentration of Windows Security **Event ID 4625** records for an account wit
 - **Recommended follow-up:** commit the actual `Detect-FailedLogins.ps1` source after reviewing it for secrets, then add a controlled positive test and a documented negative test. Do not represent the current screenshot as proof of positive detection.
 
 ## Evidence
-**Screenshot 48:** `48-IR006-Reusable-Detection-Script.png` (verify actual uploaded filename in [evidence/screenshots](../evidence/screenshots/)).
+**Screenshot 48:** Original evidence is maintained in the Kali repository's shared chronological screenshot archive; see the verified visual evidence below.
 
-## Interview refresher
+## Technical Summary & Key Takeaways
 **What did you build?** A reusable PowerShell failed-authentication check using native Windows event logs, independent of a SIEM subscription.
 
 **What was the result?** The script completed and reported that no account met the configured threshold in that run.
