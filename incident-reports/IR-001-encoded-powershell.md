@@ -155,9 +155,9 @@ Command-line and parent-process evidence:
 
 Using two readable artifacts is preferable to a single compressed screenshot that obscures investigative details.
 
-## Five-minute refresher and technical interview preparation
+## Technical Summary & Key Takeaways
 
-**30-second explanation:** I generated an authorized encoded PowerShell execution on CLIENT01, confirmed Sysmon Event 1 captured the command, and validated a scheduled Splunk alert. I investigated the parent process, user, time window, and neighboring events, filtered known Universal Forwarder noise from the search view, and closed the case as an authorized simulation. The detection was a true positive for encoded execution, but the activity was benign.
+**Executive technical recap:** I generated an authorized encoded PowerShell execution on CLIENT01, confirmed Sysmon Event 1 captured the command, and validated a scheduled Splunk alert. I investigated the parent process, user, time window, and neighboring events, filtered known Universal Forwarder noise from the search view, and closed the case as an authorized simulation. The detection was a true positive for encoded execution, but the activity was benign.
 
 | Item | What to remember | Why it mattered |
 |---|---|---|
@@ -176,19 +176,19 @@ Using two readable artifacts is preferable to a single compressed screenshot tha
 4. **Filter known collection noise analytically:** improves signal without deleting evidence.
 5. **Separate detection accuracy from incident disposition:** the rule correctly matched a benign test.
 
-<details><summary>Interview question: Why is this a true-positive detection but a benign incident?</summary>
+<details><summary>Engineering question: Why is this a true-positive detection but a benign incident?</summary>
 
 The analytic was designed to identify encoded PowerShell, and that behavior occurred. The event was therefore a true positive for the rule. The user, timing and known authorized test context supported a benign case disposition.
 
 </details>
 
-<details><summary>Interview question: How would you investigate this without Splunk?</summary>
+<details><summary>Engineering question: How would you investigate this without Splunk?</summary>
 
 Use Sysmon Event 1 through Windows Event Viewer or `Get-WinEvent`, inspect command line and parent-process context, review nearby Security and PowerShell events, and document findings. The original Splunk trial has expired; this is an alternative workflow, not a claim that it was executed during IR-001.
 
 </details>
 
-<details><summary>Interview question: What is a limitation of the detection?</summary>
+<details><summary>Engineering question: What is a limitation of the detection?</summary>
 
 Searching raw XML for the literal `EncodedCommand` may miss abbreviated switches and alternate execution paths. A stronger rule would normalize command-line fields, test variants, and correlate additional telemetry.
 
