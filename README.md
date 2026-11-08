@@ -17,9 +17,15 @@
 
 **What is documented:** Encoded PowerShell process analysis, failed-login thresholds, privileged AD group changes, Windows event correlation, process context, and detection logic. Evidence and reports are linked in the [recruiter fast path](#recruiter--interviewer-fast-path).
 
-**How to review:** Begin with [IR-001 encoded PowerShell](incident-reports/IR-001-encoded-powershell.md), inspect the [detection catalog](docs/detection-catalog.md), and follow the [reviewer guide](docs/reviewer-guide.md). Use the [common report standard](docs/PORTFOLIO-REPORT-STANDARD.md) for the full investigation, embedded screenshot, command rationale, refresher, and interview-Q&A target format.
+**How to review:** Begin with [IR-001 encoded PowerShell](incident-reports/IR-001-encoded-powershell.md), inspect the [detection catalog](docs/detection-catalog.md), and follow the [reviewer guide](docs/reviewer-guide.md). Use the [common report standard](docs/PORTFOLIO-REPORT-STANDARD.md) for the evidence-first investigation, embedded screenshot, command rationale, technical summary, and engineering decision format.
 
 **Outcome and relevance:** Demonstrates Windows SOC analysis, telemetry validation, alert engineering, Active Directory monitoring, and documented investigative judgment. Controlled simulations are not presented as production incidents. Legacy report modernization is in progress.
+
+### Documentation and technical review
+
+- **[Professional case-study standard](docs/PORTFOLIO-REPORT-STANDARD.md):** consistent evidence-first investigation format, technical rationale, limitations and verified outcomes.
+- **[Technical study guide](docs/TECHNICAL-STUDY-GUIDE.md):** separate active-recall questions, command explanations and preparation notes.
+
 
 ## Executive Summary
 
