@@ -19,7 +19,7 @@
 ![Sysmon](https://img.shields.io/badge/Sysmon-Telemetry-5E5E5E)
 ![Active Directory](https://img.shields.io/badge/Active_Directory-IAM-0078D4)
 ![MITRE ATT&CK](https://img.shields.io/badge/MITRE_ATT%26CK-Mapped-EA1B2D)
-![Status](https://img.shields.io/badge/Project-Complete-2EA44F)
+![Status](https://img.shields.io/badge/Project-Documented-2EA44F)
 
 ## 🧭 About this repository — recruiter and technical reviewer guide
 
@@ -39,6 +39,17 @@
 
 
 **Validation and provenance:** The original Windows detection exercises were tested in the controlled lab, with outcomes documented in the linked reports and evidence. Splunk alert validation is historical because the trial has expired. Where code has been subsequently rewritten or reconstructed, the repository must distinguish that implementation from the original tested file; historical test success does not establish byte-for-byte equivalence.
+
+## Analyst review: what to inspect
+
+**Detection:** [Encoded PowerShell case](incident-reports/IR-001-encoded-powershell.md) — inspect process telemetry and the distinction between an encoded command indicator and a malicious verdict.
+
+**Identity:** [Failed-logon case](incident-reports/IR-006-failed-logon-script.md) — examine the threshold, source events, and how a benign test can validate alert logic without proving an intrusion.
+
+**Audit recovery:** [Kerberos case](incident-reports/IR-007-smb-kerberos-audit-recovery.md) — follow the missing-event troubleshooting and verification after audit-policy changes.
+
+**Reproduce and challenge:** [Detection catalog](docs/detection-catalog.md) and [evidence index](evidence/README.md). A detection match is a lead requiring contextual triage; historical Splunk results remain historical.
+
 
 ## Executive Summary
 
