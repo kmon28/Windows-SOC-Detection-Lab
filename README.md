@@ -1,5 +1,8 @@
 # Windows SOC Detection & Threat Hunting Lab
 
+**Reviewer quick reference:** [Windows SOC triage](docs/analyst-triage-quick-reference.md) — a concise evidence-first guide to interpreting findings, alternative explanations, and limitations.
+
+
 
 ## Featured Investigations — 60-Second Review
 
