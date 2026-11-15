@@ -9,7 +9,7 @@
 | Case study | What it demonstrates | Open evidence |
 | --- | --- | --- |
 | [Encoded PowerShell investigation](incident-reports/IR-001-encoded-powershell.md) | Investigated encoded command execution using Sysmon telemetry | [Incident report](incident-reports/IR-001-encoded-powershell.md) |
-| [Failed logon detection](incident-reports/IR-006-failed-logon-script.md) | Correlated Windows authentication failures and documented alert logic | [Incident report](incident-reports/IR-006-failed-logon-script.md) |
+| [Failed logon detection](incident-reports/IR-006-failed-logon-script.md) | Documented Windows authentication triage and the observed no-alert execution path | [Incident report](incident-reports/IR-006-failed-logon-script.md) · [Reference PowerShell](scripts/Detect-FailedLogins-Reference.ps1) |
 | [Kerberos audit recovery](incident-reports/IR-007-smb-kerberos-audit-recovery.md) | Investigated missing audit telemetry and validated recovery | [Incident report](incident-reports/IR-007-smb-kerberos-audit-recovery.md) |
 
 **For technical reviewers:** Open the linked report to examine the observations, limitations, and supporting evidence. These projects document controlled lab activity, not actual production incidents.
@@ -41,7 +41,7 @@
 - **[Technical study guide](docs/TECHNICAL-STUDY-GUIDE.md):** separate active-recall questions, command explanations and preparation notes.
 
 
-**Validation and provenance:** The original Windows detection exercises were tested in the controlled lab, with outcomes documented in the linked reports and evidence. Splunk alert validation is historical because the trial has expired. Where code has been subsequently rewritten or reconstructed, the repository must distinguish that implementation from the original tested file; historical test success does not establish byte-for-byte equivalence.
+**Validation and provenance:** The original Windows detection exercises were tested in the controlled lab, with outcomes documented in the linked reports and evidence. The current screenshot archive contains 44 image artifacts. Splunk alert validation is historical because the trial has expired. Where code has been subsequently rewritten or reconstructed, the repository must distinguish that implementation from the original tested file; historical test success does not establish byte-for-byte equivalence.
 
 ## Analyst review: what to inspect
 
