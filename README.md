@@ -1,5 +1,16 @@
 # Windows SOC Detection & Threat Hunting Lab
 
+## Featured Investigations — 60-Second Review
+
+| Case study | What it demonstrates | Open evidence |
+| --- | --- | --- |
+| [Encoded PowerShell investigation](incident-reports/IR-001-encoded-powershell.md) | Investigated encoded command execution using Sysmon telemetry | [Incident report](incident-reports/IR-001-encoded-powershell.md) |
+| [Failed logon detection](incident-reports/IR-006-failed-logon-script.md) | Correlated Windows authentication failures and documented alert logic | [Incident report](incident-reports/IR-006-failed-logon-script.md) |
+| [Kerberos audit recovery](incident-reports/IR-007-smb-kerberos-audit-recovery.md) | Investigated missing audit telemetry and validated recovery | [Incident report](incident-reports/IR-007-smb-kerberos-audit-recovery.md) |
+
+**For technical reviewers:** Open the linked report to examine the observations, limitations, and supporting evidence. These projects document controlled lab activity, not actual production incidents.
+
+
 > **Hands-on blue-team portfolio:** Active Directory + Sysmon + Splunk Enterprise, with detection engineering, alert validation, threat hunting, IAM monitoring, incident investigation, and Windows hardening.
 
 ![Windows](https://img.shields.io/badge/Windows_Server_2022-0078D4?logo=windows&logoColor=white)
