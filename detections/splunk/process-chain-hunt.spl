@@ -2,7 +2,7 @@ index=main source="WinEventLog:Microsoft-Windows-Sysmon/Operational" "<EventID>1
 | rex field=_raw "Name='Image'>(?<Image>[^<]+)"
 | rex field=_raw "Name='CommandLine'>(?<CommandLine>[^<]*)"
 | rex field=_raw "Name='ParentImage'>(?<ParentImage>[^<]+)"
-| where like(lower(Image), "%\\cmd.exe") OR like(lower(Image), "%\\powershell.exe") OR like(lower(Image), "%\\pwsh.exe")
-| where NOT like(lower(coalesce(CommandLine,"")), "%splunkuniversalforwarder%") AND NOT like(lower(coalesce(CommandLine,"")), "%btool%")
+| where match(lower(Image), "\\\\(cmd|powershell|pwsh)\\.exe$")
+| where NOT match(lower(coalesce(CommandLine,"")), "splunkuniversalforwarder|btool")
 | table _time host Image CommandLine ParentImage
 | sort - _time
