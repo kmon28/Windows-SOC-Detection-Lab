@@ -1,5 +1,7 @@
 # Windows SOC Detection & Threat Hunting Lab
 
+**Quality and design standard:** [LEVEL UP portfolio standard](docs/LEVEL-UP-PORTFOLIO-STANDARD.md) — evidence-first SOC writing, reproducible detection engineering, and the 95+ verified quality target.
+
 > **LEVEL UP portfolio standard:** [SOC // FIELD NOTES — evidence, writing, design and 95+ quality rubric](docs/LEVEL-UP-PORTFOLIO-STANDARD.md). The score is an aspirational internal target, not an external evaluation.\n\n
 ## Featured Investigations — 60-Second Review
 
