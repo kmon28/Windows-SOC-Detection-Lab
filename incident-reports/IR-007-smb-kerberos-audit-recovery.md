@@ -59,7 +59,7 @@ Get-WinEvent -FilterHashtable @{LogName='Security';Id=4769} -MaxEvents 10 |
 | **49 — IR-007 SMB Network Logon** | `socuser` 4624 / Type 3 / CLIENT01 source IP |
 | **50 — IR-007 Kerberos 4769 Audit Validation** | Newly collected 4769 events following audit-policy correction |
 
-**Evidence location:** [Screenshots directory](../evidence/screenshots/). Exact uploaded filenames should be checked against the repository before adding direct image links.
+**Evidence location:** The original numbered screenshots for this cross-repository Windows investigation are maintained in the [Kali assessment screenshot archive](https://github.com/kmon28/Kali-Linux-Security-Assessment-Lab/tree/main/screenshots). The direct screenshot links below identify the specific files; they are not stored in this Windows repository's local `evidence/screenshots/` folder.
 
 ## Interview refresher
 **What did you detect?** A domain-account network logon from a known workstation to the DC, followed by a separate test confirming Kerberos service-ticket auditing.
