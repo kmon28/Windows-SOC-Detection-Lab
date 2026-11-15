@@ -1,19 +1,23 @@
 title: PowerShell Encoded Command
-id: 47a3bfa7-7e53-4b95-8d10-portfolio-0001
+id: 47a3bfa7-7e53-4b95-8d10-5c0f3d89a001
 status: experimental
-description: Detects PowerShell process creation using encoded-command syntax.
+description: Detects PowerShell process creation using encoded-command syntax; matching activity requires contextual triage.
 logsource:
   product: windows
   category: process_creation
 detection:
-  selection:
-    Image|endswith: '\\powershell.exe'
+  selection_image:
+    Image|endswith:
+      - '\powershell.exe'
+      - '\pwsh.exe'
+  selection_commandline:
     CommandLine|contains:
       - '-EncodedCommand'
       - '-enc '
-  condition: selection
+  condition: selection_image and selection_commandline
 falsepositives:
-  - Legitimate administrative automation
+  - Authorized administrative automation
+  - Software deployment or configuration scripts
 level: medium
 tags:
   - attack.execution
