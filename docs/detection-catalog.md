@@ -5,7 +5,7 @@ This catalog documents the analytical intent behind each use case, not just the 
 | Use case | Telemetry | Detection / hunt logic | Validation | ATT&CK | Primary risk |
 |---|---|---|---|---|---|
 | Encoded PowerShell | Sysmon EID 1 | PowerShell + encoded-command syntax | Controlled execution; scheduled alert fired | T1059.001 | Obfuscated/suspicious script execution |
-| Repeated failed logons | Security EID 4625 | Aggregate failures by target user; threshold ≥5 | Five controlled failures; alert fired | T1110.001 | Password guessing / credential attack |
+| Repeated failed logons | Security EID 4625 | Aggregate failures by target user, source IP, host and fixed five-minute time bucket; threshold ≥5 | Five controlled failures; alert fired | T1110.001 | Password guessing / credential attack |
 | Privileged group membership | Security EID 4728 | Extract actor, member, target group | Controlled Domain Admins add/remove; alert fired | T1098.007 | Privilege escalation / persistence |
 | CMD/PowerShell hunt | Sysmon EID 1 | Command interpreter + command-line extraction | Controlled `whoami && ipconfig` | T1059.003 / T1033 / T1016 | Execution + discovery |
 | Process-lineage hunt | Sysmon EID 1 | Image + command line + parent image | Baseline vs controlled activity | T1059 family visibility | Suspicious execution chains |
@@ -48,10 +48,10 @@ Document verdict + limitations
 **Tuning direction:** add normalized command-line fields, Script Block Logging, parent-process context, network correlation, and approved-automation baselines.
 
 ### Repeated failed logons
-**Signal:** five or more Event ID 4625 failures for a target account.  
+**Signal:** five or more Event ID 4625 failures for a target account from one source IP on one host in a fixed five-minute bucket.  
 **Why it matters:** repeated authentication failure can indicate password guessing.  
 **False-positive considerations:** forgotten passwords, stale credentials, services, mapped drives, user error.  
-**Tuning direction:** source host/IP, logon type, failure reason/status, success-after-failure correlation, time-of-day baseline, privileged-account weighting.
+**Tuning direction:** use rolling windows if required, normalize source IP (including missing or loopback values), logon type, failure reason/status, success-after-failure correlation, time-of-day baseline, and privileged-account weighting. The revised repository SPL is an improvement to historical source and is not represented as retested in the expired Splunk instance.
 
 ### Privileged group membership
 **Signal:** Event ID 4728 showing a member added to a security-enabled global group.  
