@@ -1,5 +1,9 @@
 # Architecture & Telemetry Flow
 
+## Current availability and evidence provenance
+
+The Splunk Enterprise trial used for the original investigations has expired. The pipeline diagram below is the **historical tested configuration**, not a currently accessible SIEM. Saved SPL, screenshots, alert history, and incident reports document that earlier work. Current follow-up investigations use native Windows Event Logs and PowerShell. This document does not claim that the expired Splunk service was restarted or revalidated.
+
 ## Objective
 Build a compact Windows enterprise-style environment where identity, endpoint, and authentication telemetry can be collected, searched, alerted on, and investigated end to end.
 
@@ -15,7 +19,7 @@ Build a compact Windows enterprise-style environment where identity, endpoint, a
 | Splunk Enterprise | Search, detection, alerting, dashboarding | SOC analysis layer |
 | Windows Firewall | Host control | SMB/TCP 445 inbound hardening |
 
-## Telemetry Pipeline
+## Historical telemetry pipeline (during the Splunk trial)
 
 ```text
 CLIENT01
