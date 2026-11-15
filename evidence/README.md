@@ -10,14 +10,14 @@ The newest chronological screenshots are stored in the [Kali assessment reposito
 | 49 — SMB network logon, Security 4624 | [View image](https://github.com/kmon28/Kali-Linux-Security-Assessment-Lab/blob/main/screenshots/49-IR007-SMB-Network-Logon.png) | [IR-007](../incident-reports/IR-007-smb-kerberos-audit-recovery.md) |
 | 50 — Kerberos 4769 audit validation | [View image](https://github.com/kmon28/Kali-Linux-Security-Assessment-Lab/blob/main/screenshots/50-IR007-Kerberos-4769-Audit-Validation.png) | [IR-007](../incident-reports/IR-007-smb-kerberos-audit-recovery.md) |
 
-These screenshots are also embedded directly inside the reports. The earlier 43-artifact gallery below documents the original Windows SOC evidence set, not the complete cross-repository screenshot count.
+These screenshots are also embedded directly inside the reports. The earlier 44-artifact gallery below documents the original Windows SOC evidence set, not the complete cross-repository screenshot count.
 
 ---
 
 
-> **43 non-empty original lab artifacts** documenting architecture, telemetry collection, detection engineering, alert validation, threat hunting, incident investigation, dashboarding, IAM monitoring, and Windows hardening.
+> **44 original lab screenshot artifacts** documenting architecture, telemetry collection, detection engineering, alert validation, threat hunting, incident investigation, dashboarding, IAM monitoring, and Windows hardening.
 
-### 📂 [Browse all 43 screenshots →](screenshots/)
+### 📂 [Browse all 44 screenshots →](screenshots/)
 
 The gallery is organized so a reviewer can jump directly from a technical claim to the underlying evidence.
 
@@ -105,7 +105,7 @@ The gallery is organized so a reviewer can jump directly from a technical claim 
 
 ## Complete Artifact Set
 
-The sections above surface the strongest reviewer-facing evidence. **[Open the screenshots directory](screenshots/)** to inspect the 43 non-empty screenshot artifacts, including additional setup and validation artifacts.
+The sections above surface the strongest reviewer-facing evidence. **[Open the screenshots directory](screenshots/)** to inspect the 44 screenshot artifacts, including additional setup and validation artifacts.
 
 ## Evidence Standard
 
