@@ -1,5 +1,6 @@
 # Windows SOC Detection & Threat Hunting Lab
 
+> **LEVEL UP portfolio standard:** [SOC // FIELD NOTES — evidence, writing, design and 95+ quality rubric](docs/LEVEL-UP-PORTFOLIO-STANDARD.md). The score is an aspirational internal target, not an external evaluation.\n\n
 ## Featured Investigations — 60-Second Review
 
 | Case study | What it demonstrates | Open evidence |
