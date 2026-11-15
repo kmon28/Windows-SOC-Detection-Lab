@@ -38,6 +38,8 @@
 - **[Technical study guide](docs/TECHNICAL-STUDY-GUIDE.md):** separate active-recall questions, command explanations and preparation notes.
 
 
+**Validation and provenance:** The original Windows detection exercises were tested in the controlled lab, with outcomes documented in the linked reports and evidence. Splunk alert validation is historical because the trial has expired. Where code has been subsequently rewritten or reconstructed, the repository must distinguish that implementation from the original tested file; historical test success does not establish byte-for-byte equivalence.
+
 ## Executive Summary
 
 I built a Windows enterprise-style security lab to practice the complete defensive workflow: **collect telemetry → engineer detections → validate alerts → hunt behavior → investigate context → document conclusions**.
