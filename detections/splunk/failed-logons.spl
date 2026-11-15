@@ -1,5 +1,8 @@
 index=main source="WinEventLog:Security" "<EventID>4625</EventID>"
 | rex field=_raw "Name='TargetUserName'>(?<TargetUserName>[^<]+)"
-| stats count as FailedAttempts by TargetUserName
+| rex field=_raw "Name='IpAddress'>(?<SourceIP>[^<]+)"
+| where isnotnull(TargetUserName)
+| bin _time span=5m
+| stats count as FailedAttempts by _time host TargetUserName SourceIP
 | where FailedAttempts >= 5
 | sort - FailedAttempts
