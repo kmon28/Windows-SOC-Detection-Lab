@@ -18,7 +18,7 @@ A concentration of Windows Security **Event ID 4625** records for an account wit
 ## Validation outcome
 - **Observed:** PowerShell script returned `OK: No threshold reached` and the prompt returned.
 - **Not yet established from the recorded output:** a positive threshold trigger, false-positive rate, performance on a large Security log, or exact script parameter values.
-- **Recommended follow-up:** commit the actual `Detect-FailedLogins.ps1` source after reviewing it for secrets, then add a controlled positive test and a documented negative test. Do not represent the current screenshot as proof of positive detection.
+- **Source availability:** The original VM file `Detect-FailedLogins.ps1` is not confirmed in this repository. A [new PowerShell reference implementation](../scripts/Detect-FailedLogins-Reference.ps1) documents the same investigative approach with named XML fields and account/source/host grouping. It is **not a byte-for-byte recovery**, and its execution has **not** been verified in the original VM. The screenshot supports only the historical no-alert path. A controlled positive test of the new reference remains unverified.
 
 ## Evidence
 **Screenshot 48:** Original evidence is maintained in the Kali repository's shared chronological screenshot archive; see the verified visual evidence below.
